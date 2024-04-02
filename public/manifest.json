@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Possible Calendars Extension",
+    "version": "0.0.1",
+    "description": "Description of my extension",
+    "action": {
+        "default_popup": "index.html"
+    },
+    "permissions": [
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://*/*",
+        "http://*/*"
+    ]
+}
