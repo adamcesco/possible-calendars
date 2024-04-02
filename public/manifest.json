@@ -3,14 +3,20 @@
     "name": "Possible Calendars Extension",
     "version": "0.0.1",
     "description": "Description of my extension",
-    "action": {
-        "default_popup": "index.html"
-    },
     "permissions": [
-        "scripting"
+        "scripting",
+        "activeTab"
     ],
-    "host_permissions": [
-        "https://*/*",
-        "http://*/*"
-    ]
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*.goodtime.io/confirm/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "action": {
+        "default_popup": "src/popup/index.html"
+    }
 }
